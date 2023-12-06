@@ -4,7 +4,7 @@ const path = require('node:path')
 console.log(path.sep)
 
 // join paths
-const filePath = path.join('/content', 'subfolder', 'test.txt')
+const filePath = path.join('content', 'subfolder', 'test.txt')
 console.log(filePath)
 
 // get the base name
