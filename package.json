@@ -1,0 +1,26 @@
+{
+  "name": "learn-node",
+  "version": "1.0.0",
+  "description": "Learn how to code with Node.js",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emapeire/learn-node.git"
+  },
+  "keywords": [
+    "nodejs",
+    "javascript"
+  ],
+  "author": "Emanuel Peire",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emapeire/learn-node/issues"
+  },
+  "homepage": "https://github.com/emapeire/learn-node#readme",
+  "dependencies": {
+    "picocolors": "^1.0.0"
+  }
+}

@@ -1,5 +1,6 @@
 const fs = require('node:fs/promises')
 const path = require('node:path')
+const pico = require('picocolors')
 
 const folder = process.argv[2] ?? '.'
 
@@ -8,7 +9,7 @@ async function ls(folder) {
   try {
     files = await fs.readdir(folder)
   } catch {
-    console.error(`Error reading the directory: ${folder}`)
+    console.error(pico.error(`❌ Error reading the directory: ${folder}`))
     process.exit(1)
   }
 
@@ -27,7 +28,9 @@ async function ls(folder) {
     const fileSize = stats.size.toString().padStart(10)
     const fileModified = stats.mtime.toLocaleString()
 
-    return `${fileType} ${file.padEnd(20)} ${fileModified} ${fileSize} bytes`
+    return `${pico.bgCyan(fileType)} ${pico.blue(
+      file.padEnd(20)
+    )} ${pico.yellow(fileModified)} ${pico.green(fileSize)} bytes`
   })
 
   const filesInfo = await Promise.all(filePromises)
