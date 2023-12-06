@@ -5,6 +5,8 @@ const server = http.createServer((req, res) => {
   res.end('Hello World')
 })
 
-server.listen(8080, () => {
-  console.log('Server listening on port http://localhost:8080')
+server.listen(0, () => {
+  console.log(
+    `Server listening on port http://localhost:${server.address().port}`
+  )
 })
