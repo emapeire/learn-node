@@ -19,7 +19,7 @@ async function ls(folder) {
     try {
       stats = await fs.stat(filePath)
     } catch {
-      console.error(`Error reading file: ${filePath}`)
+      console.error(`❌ Error reading file: ${filePath}`)
       process.exit(1)
     }
 
@@ -30,7 +30,9 @@ async function ls(folder) {
 
     return `${pico.bgCyan(fileType)} ${pico.blue(
       file.padEnd(20)
-    )} ${pico.yellow(fileModified)} ${pico.green(fileSize)} bytes`
+    )} ${pico.yellow(fileModified)} ${
+      pico.green(fileSize) + pico.dim(' ') + pico.gray('bytes')
+    }`
   })
 
   const filesInfo = await Promise.all(filePromises)
