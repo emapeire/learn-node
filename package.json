@@ -2,9 +2,10 @@
   "name": "learn-node",
   "version": "1.0.0",
   "description": "Learn how to code with Node.js",
-  "main": "",
+  "main": "./ls/ls-advanced.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./ls/ls-advanced.js"
   },
   "repository": {
     "type": "git",
